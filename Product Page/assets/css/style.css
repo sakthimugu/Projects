@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Iceland&family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #191BDF;
+    height: 80px;
+}
+.container .leftNav h1{
+    color: white;
+    font-family: "Iceland", serif;
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+.container .rightNav ul{
+    display: flex;
+}
+.container .rightNav ul a li{
+    list-style-type: none;
+    padding: 0px 20px;
+}
+.container .rightNav ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.container .rightNav ul a li .icons{
+    font-size: 25px;
+    padding:10px;
+}
+.container .menu{
+    display: none;
+}
+
+.items{
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap : 40px;
+    background-color: orangered;
+    padding: 0px 50px;
+    padding-top: 120px;
+}
+.items .subitems{
+    height: 370px;
+    border: 4px solid black;
+    background-color: #030F0F;
+    border-radius: 30px;
+}
+.items .subitems .items_img{
+    width: 100%;
+}
+.items .subitems .items_img img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+.items .subitems h3{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: "Funnel Sans", serif;
+    letter-spacing: 1.5px;
+}
+.items .subitems h4{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+.items .subitems button{
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    background-color: greenyellow;
+    border: none;
+    outline: none;
+}
+
+
+
+@media (max-width:600px){
+
+    .container .leftNav h1{
+        color: white;
+        font-size: 40px;
+    }
+     .rightNav{
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #4143e8;
+        width: 100%;
+    }
+    .show{
+        display: block;
+    }
+    .container .rightNav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .container .rightNav ul a li{
+        list-style-type: none;
+        text-align: center;
+    }
+    .container .rightNav ul a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    .container .rightNav ul a li .icons{
+        font-size: 25px;
+        padding:10px;
+    }
+    .container .menu{
+        display: block;
+    }
+    .container .menu button{
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-size: 35px;
+        color: white;
+        margin-right: 20px;
+    }
+    .items{
+        width: 100%;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        gap : 40px;
+        background-color: orangered;
+        padding: 0px 50px;
+        padding-top: 100px;
+    }
+}
