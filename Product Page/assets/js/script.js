@@ -34,27 +34,42 @@ const products = [
 
 
 ]
+const emptyArray = [];
+const carticon = document.querySelector('.itemscount');
+const countItems = document.createElement('p');
 const items = document.querySelector('.items');
 const mapProduct = products.map((val) => {
     const subitems = document.createElement('div');
     subitems.classList.add('subitems');
     subitems.innerHTML = `<div class="items_img"><img src=${val.img_src}></div>
     <h3>${val.product_name}</h3>
-    <h4>&#8377 ${val.price}</h4>
-    <button type="submit" class="AddtoCart">${val.buy}</button>`
+    <h4>&#8377 ${val.price}</h4>`
+    const addtocart = document.createElement('button');
+    addtocart.innerText="Add to Cart";
+    addtocart.setAttribute('type','submit');
+    addtocart.classList.add("AddtoCart")
+    subitems.append(addtocart);
     items.append(subitems)
 
-
     // //Adding items to Add to cart
-    // const cartItems = [];
-    // const addbutton = document.querySelector('.AddtoCart');
-    // addbutton.addEventListener('click', (add) => {
-    //     cartItems.push(val);
-    //     console.log(cartItems);
-    // })
-    
-    
+    addtocart.addEventListener('click', (add) => {
+        emptyArray.push(val);
+        console.log(emptyArray.length);
+
+    //count items
+        countItems.innerText=`${emptyArray.length}`
+        carticon.append(countItems)  
+    })
+
+
 })
+console.log(emptyArray.length);
+
+ 
+    
+
+
+
 
 
 

@@ -37,6 +37,16 @@
     font-size: 25px;
     padding:10px;
 }
+.container .rightNav ul a li p{
+    position: absolute;
+    bottom: 26px;
+    right: 0px;
+    font-size: 15px;
+    color: white;
+    padding: 7px;
+    border-radius: 60%;
+    background-color: orangered;
+}
 .container .menu{
     display: none;
 }
@@ -126,6 +136,10 @@
         font-size: 25px;
         padding:10px;
     }
+    .container .rightNav ul a li .itemscount{
+        position: relative;
+        right:22px;
+    }
     .container .menu{
         display: block;
     }
@@ -146,5 +160,15 @@
         background-color: orangered;
         padding: 0px 50px;
         padding-top: 100px;
+    }
+
+    .container .rightNav ul a li p{
+       position: relative;
+       left: 50px;
+        font-size: 15px;
+        color: white;
+        padding: 7px;
+        border-radius: 60%;
+        background-color: orangered;
     }
 }
